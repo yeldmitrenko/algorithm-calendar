@@ -5,7 +5,7 @@ def sort_ranges(array):
     current_position = 0
 
     for i in range(1, len(array)):
-        if sum(array[0]) >= sum(array[i]):
+        if array[0][0] > array[i][0]:
             current_position += 1
             array[i], array[current_position] = array[current_position], array[i]
     array[0], array[current_position] = array[current_position], array[0]
@@ -44,5 +44,5 @@ def normalize_output(array):
 
 
 if __name__ == '__main__':
-    input_array = [(0, 1), (3, 5), (4, 8), (10, 12), (9, 10)]
+    input_array = [(0, 2), (3, 4), (5, 10), (4, 12)]
     normalize_output(input_array)
