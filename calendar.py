@@ -1,22 +1,5 @@
-def sort_ranges(array):
-    if len(array) <= 1:
-        return array
-
-    current_position = 0
-
-    for i in range(1, len(array)):
-        if array[0][0] > array[i][0]:
-            current_position += 1
-            array[i], array[current_position] = array[current_position], array[i]
-    array[0], array[current_position] = array[current_position], array[0]
-
-    return [*sort_ranges(array[:current_position]),
-            array[current_position],
-            *sort_ranges(array[current_position + 1:])]
-
-
 def merge_ranges(meetings):
-    sorted_meetings = sort_ranges(meetings)
+    sorted_meetings = sorted(meetings)
     merged_meetings = []
     previous_meeting_start, previous_meeting_end = sorted_meetings[0]
 
