@@ -1,6 +1,6 @@
 # Algorithm_Calendar
 
-## Task: 
+## Task
 Suppose the company you work for develops an electronic calendar. The calendar has a function that shows when different teams of programmers will be busy during any meeting.
 
 The periods when the team is busy are marked on the calendar as time ranges, for example, from 10:00 to 12:30 or from 12:30 to 13:00. In your program, the time interval is represented as a pair of two integers. The number means the number of the 30-minute block that goes after 9:00 am. For example, tuple (2, 4) means the range from 10:00 to 11:00, and (0, 1) is the interval 9: 00-9: 30.
